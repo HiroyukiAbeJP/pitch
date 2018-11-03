@@ -1,6 +1,144 @@
 ### 今日の成果
 
 - やったこと
+	- Python高速周り検証
+
+
+### python関係ないけど
+
+dockerのコンテナステータス見るのに
+docker statsコマンド使ってたけど
+ctop初めて知った。便利
+
+
+### 計測方法
+
+「%timeit」コマンドを利用
+or
+start_time - finish_time
+
+---
+
+### 内包表記
+
+
+1. 単純なfor loop
+2. 内包表記
+
+▶652 ms ± 4.56 ms per loop
+▶530 ms ± 5.53 ms per loop
+
+内包表記のほうが1.2 -1.3倍くらいはやい
+
+
+### そもそもなるべくfor文使わない
+
+1.for
+2.map
+3.numpy
+
+▶150 ms ± 2.61 ms per loop
+▶406 ns ± 8.75 ns per loop
+▶46.3 ms ± 599 µs per loop
+
+forは極力避ける
+
+---
+
+### whileとfor
+
+1. while
+2. for
+
+▶8.81 ms ± 349 µs per loop
+▶4.9 ms ± 215 µs per loop
+
+forのほうが1.8 - 2.0倍くらいはやい
+
+
+---
+
+### joinによる文字列結合
+
+1. +
+2. .join
+
+▶18.2 µs ± 2.33 µs per loop
+▶35.2 µs ± 1.28 µs per loop
+
+joinのほうが2倍くらい時間かかる
+
+---
+
+### yieldを使用したloop
+
+1. for loopでのフィボナッチ数列計算
+1. yieldでのフィボナッチ数列計算
+
+2.13 s ± 107 ms per loop
+4.79 µs ± 187 ns per loop
+
+▶メモリの使用量が数分の１ですんだ
+
+
+---
+
+
+### numbaを用いた高速化
+
+what's numba ?
+
+JIT(実行時)コンパイラを使うためのpythonライブラリ
+なるべくcython使いたくないけど、高速化したい人向け
+
+```python
+from numba import jit
+
+@jit
+def function()
+```
+
+---
+
+### どれくらい高速化されるか
+
+10000✖10000の行列計算
+
+1. 
+
+Time:24.166[sec]
+Time:0.516[sec]
+
+
+---
+
+### 関数内で使えないもの(例)
+
+1. 内包表記
+2. 空のlist
+
+
+---
+
+### その他
+
+1. グローバルでの処理最小化
+2. multiprocessingによるマルチスレッド処理
+3. cythonに助けを求める
+4. juliaに逃げる
+
+
+---
+
+### おわり
+
+
+---
+
+
+### 今日の成果
+
+- やったこと
 	- ドキュメント読み仕様だいたい理解できた
 	- 線形回帰とロジスティック回帰両方触ってモデル作成・検定・予測とやってみた
 
