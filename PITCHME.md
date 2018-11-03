@@ -23,10 +23,11 @@ start_time - finish_time
 
 ### 内包表記
 
+Q.list生成
 
-1. 単純なfor loop ▶ 652 ms ± 4.56 ms per loop
+1. 単純なfor loop ▶ 652 ms ± 4.56 ms
 
-2. 内包表記 ▶ 530 ms ± 5.53 ms per loop
+2. 内包表記 ▶ 530 ms ± 5.53 ms
 
 内包表記のほうが1.2 -1.3倍くらいはやい
 
@@ -34,11 +35,13 @@ start_time - finish_time
 
 ### そもそもなるべくfor文使わない
 
+Q.list生成
+
 1.for ▶ 150 ms ± 2.61 ms
 
 2.map  ▶ 406 ns ± 8.75 ns
 
-3.numpy ▶ 46.3 ms ± 599 µs per loop
+3.numpy ▶ 46.3 ms ± 599 µs
 
 forは極力避ける
 
@@ -46,11 +49,12 @@ forは極力避ける
 
 ### whileとfor
 
-1. while
-2. for
+Q.list生成
 
-▶8.81 ms ± 349 µs per loop
-▶4.9 ms ± 215 µs per loop
+1. while ▶ 8.81 ms ± 349 µs
+
+2. for ▶ 4.9 ms ± 215 µs
+
 
 forのほうが1.8 - 2.0倍くらいはやい
 
@@ -59,11 +63,10 @@ forのほうが1.8 - 2.0倍くらいはやい
 
 ### joinによる文字列結合
 
-1. +
-2. .join
+1. + ▶ 18.2 µs ± 2.33 µs
 
-▶18.2 µs ± 2.33 µs per loop
-▶35.2 µs ± 1.28 µs per loop
+2. .join ▶ 35.2 µs ± 1.28 µs
+
 
 joinのほうが2倍くらい時間かかる
 
@@ -72,12 +75,15 @@ joinのほうが2倍くらい時間かかる
 ### yieldを使用したloop
 
 1. for loopでのフィボナッチ数列計算
+
+▶ 2.13 s ± 107 ms
+
 1. yieldでのフィボナッチ数列計算
 
-2.13 s ± 107 ms per loop
-4.79 µs ± 187 ns per loop
+▶ 4.79 µs ± 187 ns
 
-▶メモリの使用量が数分の１ですんだ
+
+メモリの使用量が数分の１で済む
 
 
 ---
@@ -101,12 +107,15 @@ def function()
 
 ### どれくらい高速化されるか
 
-10000✖10000の行列計算
+Q.10000✖10000の行列計算
 
-1. 
+1. 通常
 
-Time:24.166[sec]
-Time:0.516[sec]
+▶ Time:24.166[sec]
+
+2. jitコンパイル
+
+▶Time:0.516[sec]
 
 
 ---
@@ -121,10 +130,11 @@ Time:0.516[sec]
 
 ### その他
 
-1. グローバルでの処理最小化
-2. multiprocessingによるマルチスレッド処理
-3. cythonに助けを求める
-4. juliaに逃げる
+1. 配列の初期化は[None]*nで
+2. グローバルでの処理最小化
+3. multiprocessingによるマルチスレッド処理
+4. cythonに助けを求める
+5. juliaに逃げる
 
 
 ---
@@ -133,6 +143,8 @@ Time:0.516[sec]
 
 
 ---
+
+
 
 
 ### 今日の成果
