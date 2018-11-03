@@ -13,9 +13,11 @@ ctop初めて知った。便利
 ---
 ### 計測方法
 
-「%timeit」コマンドを利用
-or
-start_time - finish_time
+「%timeit」コマンドを利用 
+
+or  
+
+start_time - finish_time  
 
 ---
 
@@ -30,6 +32,7 @@ start_time - finish_time
 
 内包表記のほうが1.2 -1.3倍くらいはやい
 
+---
 
 ### そもそもなるべくfor文使わない
 
