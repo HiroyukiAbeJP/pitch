@@ -36,9 +36,9 @@ start_time - finish_time
 
 ### そもそもなるべくfor文使わない
 
-1.for
-2.map
-3.numpy
+1.for  
+2.map  
+3.numpy  
 
 ▶150 ms ± 2.61 ms per loop
 ▶406 ns ± 8.75 ns per loop
