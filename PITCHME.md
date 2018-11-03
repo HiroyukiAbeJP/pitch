@@ -24,11 +24,9 @@ start_time - finish_time
 ### 内包表記
 
 
-1. 単純なfor loop
-2. 内包表記
+1. 単純なfor loop ▶ 652 ms ± 4.56 ms per loop
 
-▶652 ms ± 4.56 ms per loop
-▶530 ms ± 5.53 ms per loop
+2. 内包表記 ▶ 530 ms ± 5.53 ms per loop
 
 内包表記のほうが1.2 -1.3倍くらいはやい
 
@@ -36,13 +34,11 @@ start_time - finish_time
 
 ### そもそもなるべくfor文使わない
 
-1.for  
-2.map  
-3.numpy  
+1.for ▶ 150 ms ± 2.61 ms
 
-▶150 ms ± 2.61 ms per loop
-▶406 ns ± 8.75 ns per loop
-▶46.3 ms ± 599 µs per loop
+2.map  ▶ 406 ns ± 8.75 ns
+
+3.numpy ▶ 46.3 ms ± 599 µs per loop
 
 forは極力避ける
 
