@@ -3,6 +3,8 @@
 1. HSICのサンプル実装(MIC比較）と理論まとめ
 2. fancyimputeのサンプル実装と理論まとめ
 
+![alt](http://norimune.net/wp/wp-content/uploads/2014/03/fiml3.jpg)
+
 ---
 ### HSICとは
 
