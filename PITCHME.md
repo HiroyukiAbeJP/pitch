@@ -3,8 +3,6 @@
 1. HSICのサンプル実装(MIC比較）と理論まとめ
 2. fancyimputeのサンプル実装と理論まとめ
 
-![alt](http://norimune.net/wp/wp-content/uploads/2014/03/fiml3.jpg)
-
 ---
 ### HSICとは
 
@@ -33,7 +31,7 @@
 ### 結論
 
 
-（計算間違ってなければ）
+（計算間違ってなければ。間違ってそうだけど）
 
 - Pearson, MICでよくない？？
 - 要因分析なんかを詳細にやりたいならML手法(feature importanceとか)見たほうが早くない？
@@ -51,6 +49,11 @@
 	- iterativelmputer : ラウンドロビン方式で、他の特徴量の関数としてモデリングし、補完
 
 ---
+
+
+### データの欠損
+
+![alt](http://norimune.net/wp/wp-content/uploads/2014/03/fiml3.jpg)
 
 ### iterativelmputerを用いた多重代入法
 
