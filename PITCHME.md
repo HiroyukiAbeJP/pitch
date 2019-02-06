@@ -55,6 +55,10 @@
 
 ![alt](http://norimune.net/wp/wp-content/uploads/2014/03/fiml3.jpg)
 
+　　　
+   
+   
+
 ### iterativelmputerを用いた多重代入法
 
 - RのMICEパッケージとほぼ一緒
